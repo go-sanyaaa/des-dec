@@ -1,8 +1,8 @@
 <template lang="pug">
   section.desc
-    h1.desc__title Starter pack
-    img(src="img/owner.png").desc__img
-    a(href="https://github.com/go-sanyaaa/gulp-wp-starter").desc__link GitHub
+    h1.desc__title Дизайнер-декоратор
+    img(src="img/logo.png").desc__img
+    a(href="https://github.com/go-sanyaaa/des-dec").desc__link GitHub
 </template>
 
 <script>
@@ -19,15 +19,14 @@
   flex-direction: column
   &__title
     text-align: center
-    font-size: 48px
+    font-size: 28px
     margin-bottom: 20px
     color: $secondary
   &__img
     object-fit: contain
-    height: 200px
   &__link
     text-align: center
     margin-top: 20px
     font-weight: bold
-    color: $primary
+    color: $dark
 </style>
