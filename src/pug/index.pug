@@ -61,15 +61,4 @@ block content
         div.section-content__data.section-content__data--picture
           img(src="./img/about.png").section-content__img
 
-  section#works.section.works
-    div.template-wrapper
-      div.section-header.section-header--center
-        h2.section-header__title.header-2 Мои работы
-      div.section-content
-        div.section-content__data.benefit__data
-          ul.section-list.section-list--marked
-            each item in benefitList
-              li.section-list__item !{item}
-          button.button Отправить заявку
-        div.section-content__data.section-content__data--picture
-          img(src="./img/about.png").section-content__img
+  include components/works

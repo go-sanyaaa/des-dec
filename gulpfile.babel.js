@@ -35,6 +35,7 @@ const paths = {
         dist: "./dist/js/",
         watch: [
             "./src/components/**/*",
+            "./src/js/**/*",
             "./src/*.{js,vue}"
         ]
     },

@@ -30,7 +30,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "node-sass": "^4.11.0",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
@@ -45,6 +45,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "jquery-mask-plugin": "^1.14.15",
+    "owl.carousel": "^2.3.4",
     "vue-the-mask": "^0.11.1"
   }
 }

@@ -1,5 +1,6 @@
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin")
+const webpack = require("webpack")
 
 const sass = {
 	loader: 'sass-loader',
@@ -72,7 +73,12 @@ module.exports = {
 
 	plugins: [
 	// убедитесь что подключили плагин!
-	new VueLoaderPlugin()
+	new VueLoaderPlugin(),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+    }),
 	]
 	// optimization: {
 	// 	splitChunks: {

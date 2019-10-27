@@ -1,0 +1,39 @@
+.works
+  &--1
+    margin-bottom: 150px
+  &--2
+    margin-bottom: 140px
+    & .works__pattern
+      top: -60px
+  &--3
+    & .works__pattern
+      right: 0
+      top: -90px
+  &__title
+    margin-bottom: 54px
+    text-align: center
+    width: 100%
+  &__subtitle
+    display: block
+    font-size: 96px
+    margin-bottom: 20px
+    &:after
+      content: ""
+      display: flex
+      width: 257px
+      height: 2px
+      background-color: $primary
+    &--rtl
+      align-self: flex-end
+  &__data
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+    align-items: flex-start
+    &:last-child
+      margin-bottom: 0
+  &__text
+    width: 100%
+    max-width: 680px
+    font-size: 18px
+    line-height: 27px

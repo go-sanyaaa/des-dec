@@ -1,0 +1,19 @@
+.slider
+  width: 100%
+  height: 410px
+  &__number
+    font-family: "Oranienbaum", "Open Sans", sans-serif
+    font-size: 24px
+    margin-right: 28px
+  &__cntrl
+    display: flex
+    align-items: center
+  &__nav-btn
+    cursor: pointer
+    margin-right: 12px
+    & path
+      transition: .2s fill
+    &:last-child
+      margin-right: 0
+    &:hover path
+      fill: $primary
