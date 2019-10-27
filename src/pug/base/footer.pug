@@ -1,1 +1,13 @@
-h2 footer
+-
+  let fContacts = [{icon: 'mail.png',title: 'kvc@kvc42.ru'},{icon: 'phone.png',title: '+7 (3842) 44-22-20'}]
+
+footer.footer
+  div.footer-bar__wrapper
+    div.template-wrapper
+      div.footer-bar
+        p.footer-bar__text Дизайн студия "КВЦ" © 2019 Все права защищены.
+        div.footer-bar__contacts
+          each item in fContacts
+            div.footer-bar__item
+              img(src="./img/icons/"+item.icon).footer-bar__item-icon
+              span.footer-bar__text=item.title

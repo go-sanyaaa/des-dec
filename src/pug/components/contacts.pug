@@ -1,0 +1,27 @@
+-
+  let contactsList = [
+    {title: '+7 (3842) 44-22-20', icon: 'phone.png' },
+    {title: 'kvc@kvc42.ru', icon: 'mail.png' },
+    {title: '650000, г. Кемерово, ул. Сарыгина, 29 холл 1 этажа', icon: 'home.png' },
+  ]
+
+section#contacts.section.contacts
+  div.template-wrapper
+    div.section-header.contacts__header
+      h2.section-header__title.header-2.contacts__title Контакты
+    div.contacts__content
+      ul.contacts__list.contacts-list
+        each item in contactsList
+          li.contacts-list__item
+            img(src="./img/icons/"+item.icon).contacts-list__icon
+            p.contacts-list__title=item.title
+      form.contacts__form.form
+        p.form__title Пора осуществлять мечты
+        div.form__content
+          div.form__line
+            input(type="text" name="name" placeholder="Имя").input
+            input(type="text" name="phone" placeholder="Телефон").input
+          input(type="text" name="mail" placeholder="Почта").input
+          textarea(placeholder="Комментарий к заявке" rows="1").input.textarea
+        div.form__actions
+          button.button Отправить заявку
