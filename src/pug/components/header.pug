@@ -1,0 +1,32 @@
+-
+  let contacts = [{icon: 'mail-w.png',title: 'kvc@kvc42.ru'},{icon: 'phone-w.png',title: '+7 (3842) 44-22-20'}]
+  let menu = [
+    {title: 'Главная', href: '#company'},
+    {title: 'Обо мне', href: '#about'},
+    {title: 'Портфолио', href: '#works'},
+    {title: 'Контакты', href: '#contacts'},
+  ]
+
+mixin menuItem(item)
+  li.header-menu__item
+    a(href=item.href).header-menu__link=item.title
+
+header.header
+  div.header-bar__wrapper
+    div.template-wrapper
+      div.header-bar
+        p.header-bar__text 650000, г. Кемерово, ул. Сарыгина, 29 холл 1 этажа
+        div.header-bar__contacts
+          each item in contacts
+            div.header-bar__item
+              img(src="./img/icons/"+item.icon).header-bar__item-icon
+              span.header-bar__text=item.title
+  div.template-wrapper
+    menu.header__menu.header-menu
+      each item in menu.slice(0,2)
+        +menuItem(item)
+      span.header__logo
+        img(src="./img/logo.png").header__logo-img
+      each item in menu.slice(2,4)
+        +menuItem(item)
+      mobile-menu.header__mobile-menu

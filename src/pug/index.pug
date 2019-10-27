@@ -3,6 +3,73 @@ extends layouts/main
 block variables
     -
         var title = "Starter"
+        let aboutText = [
+          "Здравствуйте! Меня зовут Татьяна Матвиенко. Я дизайнер по текстилю в интерьере. В 1998 году  закончила  Российский институт легкой промышленности по специальности конструктор одежды.",
+          "Опыт работы в сфере текстильного декорирования  - 20 лет. Знаю все технологические процессы изготовления штор и имею опыт пошива и раскроя.",
+          "Моя цель в работе – создать удобный дизайн с помощью цвета, формы, фактуры. Красота в деталях!"
+        ]
+        let benefitList = [
+            'консультация',
+            'заказ штор',
+            'заказ покрывал',
+            'заказ чехлов на стулья',
+            'заказ «мягкие сиденья»',
+            'заказ подушек декоративных',
+            'декоративные карнизы',
+            'рулонные шторы',
+            'жалюзи и другие аксессуары <br/> для ваших окон',
+        ]
 
 block content
-  App
+  section#company.section.company
+    div.template-wrapper
+      div.section-content
+        div.section-content__data
+          h4.header-4 Татьяна Матвиенко
+          h1.header-1 Дизайнер-декоратор
+          p.company__text Разработка дизайна штор на заказ <br/> в стиле арт-нуво
+          button.button Отправить заявку
+        div.section-content__data.section-content__data--picture
+          img(src="./img/company.png").section-content__img
+    span.section__pattern.company__pattern
+      img(src='./img/patterns/flourish-2.svg').section__flourish
+
+  section#about.section.about
+    div.template-wrapper
+      div.section-content
+        div.section-content__data.section-content__data--picture
+          img(src="./img/about.png").section-content__img
+        div.section-content__data
+          h2.header-2 Немного обо мне
+          p.about__text.
+            #{aboutText[0]} <br/><br/>
+            #{aboutText[1]} <br/><br/>
+            #{aboutText[2]}
+    span.section__pattern.about__pattern
+      img(src='./img/patterns/flourish-4.svg').section__flourish
+
+  section#benefit.section.benefit
+    div.template-wrapper
+      div.section-header.benefit__header
+        h3.section-header__title.header-3 Чем я могу быть Вам полезна:
+      div.section-content
+        div.section-content__data.benefit__data
+          ul.section-list.section-list--marked
+            each item in benefitList
+              li.section-list__item !{item}
+          button.button Отправить заявку
+        div.section-content__data.section-content__data--picture
+          img(src="./img/about.png").section-content__img
+
+  section#works.section.works
+    div.template-wrapper
+      div.section-header.section-header--center
+        h2.section-header__title.header-2 Мои работы
+      div.section-content
+        div.section-content__data.benefit__data
+          ul.section-list.section-list--marked
+            each item in benefitList
+              li.section-list__item !{item}
+          button.button Отправить заявку
+        div.section-content__data.section-content__data--picture
+          img(src="./img/about.png").section-content__img

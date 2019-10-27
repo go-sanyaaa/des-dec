@@ -12,7 +12,10 @@ html(lang="ru")
         link(rel="stylesheet", href="./styles/main.css")
         title= title
     body
-        #app.wrapper
-            block content
+        #app.template
+            include ../components/header
+            div.content
+              block content
+            include ../components/footer
         script(defer,src="./js/bundle.js")
 

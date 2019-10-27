@@ -1,0 +1,82 @@
+.header
+  width: 100%
+  display: flex
+  flex-direction: column
+  &__logo
+    display: flex
+    align-items: center
+    @media screen and (min-width: 1081px)
+      &:after, &:before
+        content: ''
+        display: flex
+        height: 2px
+        width: 50px
+        background: $primary
+        margin: 0 30px
+  &__logo-img
+    @media screen and (max-width: 1080px)
+      margin: 0 -10px
+  &__mobile-menu
+    @media screen and (min-width: 1081px)
+      display: none
+
+.header-menu
+  width: 100%
+  box-sizing: border-box
+  padding: 32px 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  @media screen and (max-width: 1080px)
+    justify-content: space-between
+  &__item
+    margin: 0 35px
+    @media screen and (max-width: 1080px)
+      display: none
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+  &__link
+    font-family: "Oranienbaum", "Open Sans", sans-serif
+    font-size: 21px
+    white-space: nowrap
+    transition: .2s
+    cursor: pointer
+    &:hover
+      color: $primary
+
+.header-bar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 46px
+  box-sizing: border-box
+  & *
+    color: #FFF
+  &__wrapper
+    background: $primary
+  &__text
+    font-size: 14px
+    line-height: 19px
+    margin-bottom: 2px
+    @media screen and (max-width: 1080px)
+      font-size: 12px
+      margin-bottom: 0
+  &__contacts
+    display: flex
+    flex: 0 0 auto
+    @media screen and (max-width: 768px)
+      flex-direction: column
+  &__item
+    display: flex
+    align-items: center
+    margin-right: 48px
+    &:last-child
+      margin-right: 0
+    @media screen and (max-width: 768px)
+      margin-right: 0
+  &__item-icon
+    margin-right: 15px
+    @media screen and (max-width: 768px)
+      margin-right: 8px
