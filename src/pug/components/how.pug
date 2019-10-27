@@ -1,0 +1,22 @@
+-
+  let list = [
+    {desc: 'Заполните и отправьте заявку', img:'request.png'},
+    {desc: 'Дождитесь звонка от менеджера', img:'call.png'},
+    {desc: 'Ожидайте приезда дизайнера для замеров', img:'work.png'},
+  ]
+
+section#how.section.how
+  div.template-wrapper
+    div.section-header.how__header
+      h2.section-header__title.header-2.how__title Три простых шага
+    div.how__content
+      each item, index in list
+        div.how-item
+          span.how-item__icon
+            img(src='./img/icons/'+item.img).how-item__img
+          div.how-item__info
+            h6.how-item__number='0'+ (index+1) +'.'
+            span.how-item__icon.how-item__icon--mobile
+              img(src='./img/icons/' + item.img).how-item__img
+            p.how-item__desc: b=item.desc
+

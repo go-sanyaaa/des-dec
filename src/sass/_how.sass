@@ -1,0 +1,72 @@
+.how
+  margin-bottom: 190px
+  &__header
+    margin-bottom: 120px
+    @media screen and (max-width: 1366px)
+      margin-bottom: 100px
+    @media screen and (max-width: 768px)
+      margin-bottom: 40px
+  &__title
+    align-self: center
+  &__content
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      align-items: center
+
+.how-item
+  display: flex
+  margin-right: 60px
+  @media screen and (max-width: 768px)
+    margin-right: 0
+    margin-bottom: 54px
+    &:last-child
+      margin-bottom: 0
+  &:last-child
+    margin-right: 0
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 105px
+    height: 105px
+    border: 2px solid $primary
+    border-radius: 50%
+    @media screen and (max-width: 1366px)
+      display: none
+    &--mobile
+      display: none
+      @media screen and (max-width: 1366px)
+        display: flex
+        margin-bottom: 15px
+  &__img
+    &[src='./img/icons/work.png']
+      margin-bottom: 5px
+    &[src='./img/icons/request.png']
+      margin-left: 10px
+  &__info
+    display: flex
+    flex-direction: column
+    margin-left: 15px
+    @media screen and (max-width: 1366px)
+      align-items: center
+  &__number
+    font-size: 48px
+    line-height: 36px
+    font-family: "Oranienbaum", "Open Sans", sans-serif
+    margin-bottom: 19px
+    @media screen and (max-width: 1368px)
+      margin-bottom: 31px
+    @media screen and (max-width: 768px)
+      font-size: 32px
+      line-height: 32px
+      margin-bottom: 21px
+  &__desc
+    font-size: 18px
+    line-height: 27px
+    width: 235px
+    @media screen and (max-width: 1366px)
+      font-size: 16px
+      line-height: 24px
+      text-align: center
