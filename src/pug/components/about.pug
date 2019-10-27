@@ -1,0 +1,20 @@
+-
+  let aboutText = [
+    "Здравствуйте! Меня зовут Татьяна Матвиенко. Я дизайнер по текстилю в интерьере. В 1998 году  закончила  Российский институт легкой промышленности по специальности конструктор одежды.",
+    "Опыт работы в сфере текстильного декорирования  - 20 лет. Знаю все технологические процессы изготовления штор и имею опыт пошива и раскроя.",
+    "Моя цель в работе – создать удобный дизайн с помощью цвета, формы, фактуры. Красота в деталях!"
+  ]
+
+section#about.section.about
+  div.template-wrapper
+    div.section-content
+      div.section-content__data.section-content__data--picture
+        img(src="./img/about.png").section-content__img
+      div.section-content__data
+        h2.header-2 Немного обо мне
+        p.about__text.
+          #{aboutText[0]} <br/><br/>
+          #{aboutText[1]} <br/><br/>
+          #{aboutText[2]}
+  span.section__pattern.about__pattern
+    img(src='./img/patterns/flourish-4.svg').section__flourish

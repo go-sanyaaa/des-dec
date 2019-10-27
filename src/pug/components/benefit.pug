@@ -1,0 +1,12 @@
+section#benefit.section.benefit
+  div.template-wrapper
+    div.section-header.benefit__header
+      h3.section-header__title.header-3 Чем я могу быть Вам полезна:
+    div.section-content
+      div.section-content__data.benefit__data
+        ul.section-list.section-list--marked
+          each item in benefitList
+            li.section-list__item !{item}
+        button.button Отправить заявку
+      div.section-content__data.section-content__data--picture
+        img(src="./img/about.png").section-content__img
