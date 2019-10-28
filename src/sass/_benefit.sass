@@ -1,6 +1,32 @@
 .benefit
   margin-bottom: 212px
+  @media screen and (max-width: 768px)
+    margin-bottom: 50px
+
   &__header
     margin-bottom: 45px
+    @media screen and (max-width: 768px)
+      align-items: center
+
   &__data
     justify-content: space-between
+    @media screen and (max-width: 768px)
+      margin-bottom: 70px
+
+  &__list
+    margin-bottom: 100px
+    @media screen and (max-width: 1080px)
+      margin-bottom: 70px
+      & > li
+        font-size: 18px
+        line-height: 27px
+    @media screen and (max-width: 768px)
+      margin-bottom: 45px
+
+  &__button
+    @media screen and (max-width: 768px)
+      align-self: center
+
+  &__picture
+    @media screen and (max-width: 768px)
+      height: 370px

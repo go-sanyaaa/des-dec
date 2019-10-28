@@ -9,6 +9,8 @@
   align-items: center
   height: 74px
   box-sizing: border-box
+  @media screen and (max-width: 768px)
+    height: 62px
   & *
     color: #000
   &__wrapper
@@ -20,19 +22,22 @@
     @media screen and (max-width: 1080px)
       font-size: 12px
       margin-bottom: 0
+    @media screen and (max-width: 768px)
+      font-size: 10px
   &__contacts
     display: flex
     flex: 0 0 auto
+    flex-direction: column
     @media screen and (max-width: 768px)
       flex-direction: column
   &__item
     display: flex
     align-items: center
-    margin-right: 48px
-    &:last-child
-      margin-right: 0
+    margin-bottom: 8px
     @media screen and (max-width: 768px)
-      margin-right: 0
+      margin-bottom: 2px
+    &:last-child
+      margin-bottom: 0
   &__item-icon
     margin-right: 15px
     @media screen and (max-width: 768px)

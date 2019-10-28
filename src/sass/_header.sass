@@ -5,6 +5,8 @@
   &__logo
     display: flex
     align-items: center
+    @media screen and (max-width: 1080px)
+      width: 100px
     @media screen and (min-width: 1081px)
       &:after, &:before
         content: ''
@@ -15,10 +17,15 @@
         margin: 0 30px
   &__logo-img
     @media screen and (max-width: 1080px)
+      width: 100%
       margin: 0 -10px
   &__mobile-menu
     @media screen and (min-width: 1081px)
       display: none
+
+  @media screen and (max-width: 768px)
+    & .template-wrapper
+      padding: 0 10px
 
 .header-menu
   width: 100%
@@ -29,6 +36,8 @@
   align-items: center
   @media screen and (max-width: 1080px)
     justify-content: space-between
+  @media screen and (max-width: 768px)
+    padding: 20px 15px
   &__item
     margin: 0 35px
     @media screen and (max-width: 1080px)

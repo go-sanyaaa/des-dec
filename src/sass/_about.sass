@@ -1,10 +1,46 @@
 .about
   margin-bottom: 90px
+  @media screen and (max-width: 1080px)
+    margin-bottom: 60px
+  @media screen and (max-width: 768px)
+    margin-bottom: 20px
+
   &__text
     font-size: 18px
     line-height: 27px
     margin-top: 40px
     max-width: 553px
+    @media screen and (max-width: 1366px)
+      font-size: 16px
+      line-height: 24px
+
   &__pattern
     right: 0
     bottom: -3px
+    @media screen and (max-width: 1366px)
+      width: 280px
+    @media screen and (max-width: 1080px)
+      bottom: -80px
+      width: 200px
+    @media screen and (max-width: 768px)
+      display: none
+
+  &__data
+    @media screen and (max-width: 1080px)
+      margin-top: -91px
+    @media screen and (max-width: 768px)
+      margin-top: 0
+      margin-bottom: 70px
+      align-items: center
+  &__picture
+    @media screen and (max-width: 1080px)
+      max-width: 280px
+    @media screen and (max-width: 768px)
+      width: 100%
+      height: 420px
+
+  &__content
+    @media screen and (max-width: 768px)
+      flex-direction: column-reverse
+      align-items: center
+

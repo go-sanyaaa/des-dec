@@ -2,18 +2,37 @@
   margin-bottom: 140px
   &--1
     margin-bottom: 150px
+    @media screen and (max-width: 768px)
+      margin-bottom: 40px
   &--2
     margin-bottom: 140px
+    @media screen and (max-width: 768px)
+      margin-bottom: 50px
     & .works__pattern
       top: -60px
+      @media screen and (max-width: 1366px)
+        width: 250px
+      @media screen and (max-width: 1080px)
+        width: 164px
   &--3
+    margin-bottom: 160px
+    @media screen and (max-width: 1080px)
+      margin-bottom: 140px
+    @media screen and (max-width: 768px)
+      margin-bottom: 50px
     & .works__pattern
       right: 0
       top: -90px
+      @media screen and (max-width: 1366px)
+        width: 250px
+      @media screen and (max-width: 1080px)
+        width: 164px
   &__title
     margin-bottom: 54px
     text-align: center
     width: 100%
+    @media screen and (max-width: 768px)
+      margin-bottom: 34px
   &__subtitle
     display: block
     font-size: 96px
@@ -26,6 +45,13 @@
       background-color: $primary
     &--rtl
       align-self: flex-end
+      text-align: right
+    @media screen and (max-width: 1080px)
+      font-size: 76px
+    @media screen and (max-width: 768px)
+      font-size: 46px
+      &:after
+        width: 128px
   &__data
     display: flex
     justify-content: space-between
@@ -33,8 +59,25 @@
     align-items: flex-start
     &:last-child
       margin-bottom: 0
+    @media screen and (max-width: 1080px)
+      margin-bottom: 50px
+      flex-direction: column-reverse !important
+    @media screen and (max-width: 768px)
+      margin-bottom: 35px
+  &__slider-cntrl
+    @media screen and (max-width: 1080px)
+      align-self: flex-end
+      margin-bottom: 40px
+    @media screen and (max-width: 768px)
+      align-self: stretch
+      margin-bottom: 30px
+      display: flex
+      justify-content: space-between
   &__text
     width: 100%
     max-width: 680px
     font-size: 18px
     line-height: 27px
+    @media screen and (max-width: 1080px)
+      max-width: unset
+

@@ -5,6 +5,18 @@
   &__content
     display: flex
     justify-content: space-between
+    @media screen and (max-width: 1080px)
+      flex-wrap: wrap
+      & > *
+        flex-basis: 100%
+  &__list
+    @media screen and (max-width: 1080px)
+      margin-bottom: 80px
+    @media screen and (max-width: 1080px)
+      margin-bottom: 60px
+  &__action
+    @media screen and (max-width: 768px)
+      align-self: center
 
 .contacts-list
   &__item

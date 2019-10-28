@@ -3,12 +3,23 @@
   padding: 30px 0
   &__pattern
     position: absolute
+  &__flourish
+    width: 100%
+    object-fit: cover
+    @media screen and (max-width: 768px)
+      display: none
+  @media screen and (max-width: 1080px)
+    padding: 20px 0
 
 .section-header
   padding: 22px 0
   display: flex
   flex-direction: column
   align-items: flex-start
+  &__title
+    @media screen and (max-width: 768px)
+      align-self: center
+      text-align: center
 
 .section-list
   &--marked &__item
@@ -33,13 +44,33 @@
 .section-content
   display: flex
   justify-content: space-between
+  flex-wrap: wrap
   &__data
     align-items: flex-start
     margin-right: 125px
     display: flex
     flex-direction: column
-    flex: 1 1 auto
+    flex: 1 1 calc(50% - 125px)
     &:last-child
       margin-right: 0
     &--picture
-      flex: 0 1 auto
+      max-width: 500px
+      flex: 1 1 50%
+    @media screen and (max-width: 1366px)
+      margin-right: 72px
+      flex: 1 1 calc(50% - 125px)
+      &--picture
+        max-width: 410px
+    @media screen and (max-width: 1080px)
+      margin-right: 40px
+    @media screen and (max-width: 768px)
+      flex-basis: 100%
+      margin-right: 0
+      &--picture
+        max-width: unset !important
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+

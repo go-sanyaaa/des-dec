@@ -3,6 +3,51 @@
   &__text
     font-size: 21px
     margin: 40px 0 52px
+    @media screen and (max-width: 768px)
+      margin: 30px 0 42px
+      font-size: 16px
+      line-height: 24px
   &__pattern
     left: 0
     bottom: -270px
+  @media screen and (max-width: 1366px)
+    &__pattern
+      width: 220px
+  @media screen and (max-width: 1080px)
+    &__pattern
+      left: unset
+      bottom: unset
+      top: 160px
+      right: 0
+      width: 125px
+      transform: scale(-1, 1)
+  @media screen and (max-width: 768px)
+    padding-top: 40px
+    margin-bottom: 50px
+    &__pattern
+      display: none
+
+.company-content
+  @media screen and (max-width: 1080px)
+    &__data
+      max-width: unset
+      flex-basis: 100%
+      margin-right: 0
+      margin-bottom: 60px
+      &:last-child
+        margin-bottom: 0
+      &--picture
+        margin: 0 -20px
+        width: calc(100% + 40px)
+        height: 559px
+  @media screen and (max-width: 768px)
+    &__data
+      align-items: center
+      text-align: center
+      &--picture
+        height: 320px
+
+.company-wrapper
+  @media screen and (max-width: 1080px)
+    display: block
+
