@@ -12,6 +12,15 @@ mixin menuItem(item)
     a(href=item.href).header-menu__link=item.title
 
 header.header
+  div.mobile-menu.mobile-menu--hidden
+    span.mobile-menu__close-btn
+      svg(width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+        rect(y="40.0962" width="62.3785" height="3.53086" rx="1.76543" transform="rotate(-40 0 40.0962)" fill="white")
+        rect(x="3.31079" y="1.29614" width="62.3785" height="3.53086" rx="1.76543" transform="rotate(40 3.31079 1.29614)" fill="white")
+    ul.mobile-menu__list
+      each item in menu
+        li.mobile-menu__item
+          a(href=item.href).mobile-menu__link=item.title
   div.header-bar__wrapper
     div.template-wrapper
       div.header-bar
@@ -29,4 +38,8 @@ header.header
         img(src="./img/logo.png").header__logo-img
       each item in menu.slice(2,4)
         +menuItem(item)
-      mobile-menu.header__mobile-menu
+      span.header__mobile-menu
+        svg(width='41' height='22' viewbox='0 0 41 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+          rect(x='0.792969' width='40.2069' height='2.27586' rx='1.13793' fill='#242424')
+          rect(x='0.792969' y='9.86206' width='40.2069' height='2.27586' rx='1.13793' fill='#242424')
+          rect(x='0.792969' y='19.7241' width='40.2069' height='2.27586' rx='1.13793' fill='#242424')

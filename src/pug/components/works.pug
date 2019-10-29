@@ -5,12 +5,10 @@
     {slides: ["./img/slide-2.png", "/img/slide-3.png"], rtl: false},
   ]
 
-mixin workData(work)
+mixin workData(work,i)
   div.works__data
     div.slider
-      div.owl-carousel
-        each slide in work.slides
-          img(src=slide).slider__img
+      div(class="owl-slide-"+i).owl-carousel
         each slide in work.slides
           img(src=slide).slider__img
   div(style={flexDirection: work.rtl ? 'row-reverse' : 'row'}).works__data
@@ -19,11 +17,11 @@ mixin workData(work)
       Это творческая работа, приносящая ни с чем не сравнимую радость – как заказчику, так и самому исполнителю.
       Услуги дизайнера по шторам подразумевают выезд на объект в удобное для заказчика время, иногда включая выходные и праздничные дни
     div.works__slider-cntrl.slider__cntrl
-      span.slider__number 1/3
+      span.slider__number 1/2
       div.slider__navigation
         svg(width="71" height="16" viewBox="0 0 71 16" fill="#232323" xmlns="http://www.w3.org/2000/svg").slider__nav-btn.slider-prev
           path(d="M0.292901 7.29289C-0.0976249 7.68342 -0.0976249 8.31658 0.292901 8.70711L6.65686 15.0711C7.04739 15.4616 7.68055 15.4616 8.07108 15.0711C8.4616 14.6805 8.4616 14.0474 8.07108 13.6569L2.41422 8L8.07108 2.34315C8.4616 1.95262 8.4616 1.31946 8.07108 0.928933C7.68055 0.538409 7.04739 0.538409 6.65686 0.928933L0.292901 7.29289ZM71 7L1.00001 7V9L71 9V7Z")
-        svg(width="71" height="16" viewBox="0 0 71 16" fill="#232323" xmlns="http://www.w3.org/2000/svg").slider__nav-btn.slider-prev
+        svg(width="71" height="16" viewBox="0 0 71 16" fill="#232323" xmlns="http://www.w3.org/2000/svg").slider__nav-btn.slider-next
           path(d="M70.7071 8.70711C71.0976 8.31658 71.0976 7.68342 70.7071 7.29289L64.3431 0.928932C63.9526 0.538408 63.3195 0.538408 62.9289 0.928932C62.5384 1.31946 62.5384 1.95262 62.9289 2.34315L68.5858 8L62.9289 13.6569C62.5384 14.0474 62.5384 14.6805 62.9289 15.0711C63.3195 15.4616 63.9526 15.4616 64.3431 15.0711L70.7071 8.70711ZM0 9L70 9V7L0 7L0 9Z")
 
 
@@ -32,8 +30,8 @@ section#works.section.works.works--1
     div.section-header.works__header
       h2.section-header__title.header-2.works__title Мои работы
       h5.works__subtitle 01
-    div.works__content
-      +workData(works[0])
+    div.works__content.slider__wrapper
+      +workData(works[0],1)
 
 section.section.works.works--2
   span.section__pattern.works__pattern
@@ -41,8 +39,8 @@ section.section.works.works--2
   div.template-wrapper
     div.section-header.works__header
       h5.works__subtitle.works__subtitle--rtl 02
-    div.works__content
-      +workData(works[1])
+    div.works__content.slider__wrapper
+      +workData(works[1],2)
 
 section.section.works.works--3
   span.section__pattern.works__pattern
@@ -50,5 +48,5 @@ section.section.works.works--3
   div.template-wrapper
     div.section-header.works__header
       h5.works__subtitle 03
-    div.works__content
-      +workData(works[2])
+    div.works__content.slider__wrapper
+      +workData(works[2],3)
