@@ -12,3 +12,20 @@ block content
   include components/how
   include components/contacts
   include components/map
+  div.request-popup__wrapper.request-popup__wrapper--hidden
+    div.template-wrapper.request-popup__content
+      div.request-popup
+        span.request-popup__close-btn
+          svg(width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+            rect(y="40.0962" width="62.3785" height="3.53086" rx="1.76543" transform="rotate(-40 0 40.0962)" fill="black")
+            rect(x="3.31079" y="1.29614" width="62.3785" height="3.53086" rx="1.76543" transform="rotate(40 3.31079 1.29614)" fill="black")
+        form.contacts__form.form
+          p.form__title Заказать обратный звонок
+          p.form__text Оставьте свой номер телефона и мы Вам позвоним!
+          div.form__content
+            div.form__line
+              input(type="text" name="name" placeholder="Имя").input
+              input(type="text" name="phone" placeholder="Телефон").input
+            input(type="datetime-local" name="mail" placeholder="Укажите удобное для вас время").input
+          div.form__actions.contacts__action
+            button.button Отправить заявку

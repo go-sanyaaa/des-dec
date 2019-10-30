@@ -4,6 +4,7 @@
 // import VueTheMask from 'vue-the-mask'
 import '@/js/slider'
 import '@/js/menu'
+import '@/js/request'
 //
 // Vue.use(VueTheMask)
 //
