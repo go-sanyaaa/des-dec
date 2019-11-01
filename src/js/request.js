@@ -12,15 +12,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
     function openRequestPopup(){
         popup.classList.remove('request-popup__wrapper--hidden')
-        app.style.height = '100%'
-        app.style.overflow = 'hidden'
     }
 
     function hideRequestPopup(){
         if(!popup.classList.contains('request-popup__wrapper--hidden')){
             popup.classList.add('request-popup__wrapper--hidden')
         }
-        app.style.height = 'auto'
-        app.style.overflow = 'auto'
     }
 })
