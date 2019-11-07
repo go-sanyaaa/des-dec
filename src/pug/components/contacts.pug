@@ -16,12 +16,15 @@ section#contacts.section.contacts
             img(src="./img/icons/"+item.icon).contacts-list__icon
             p.contacts-list__title=item.title
       form.contacts__form.form
+        div.form-success.form-success--hidden
+          p.form-success__message Ваша заявка успешно отправлена
+          button(type="button").form-success__btn ОК
         p.form__title Пора осуществлять мечты
         div.form__content
           div.form__line
-            input(type="text" name="name" placeholder="Имя").input
-            input(type="text" name="phone" placeholder="Телефон").input
+            input(type="text" name="name" placeholder="Имя" required).input
+            input(type="text" name="phone" placeholder="Телефон" required).input
           input(type="text" name="mail" placeholder="Почта").input
-          textarea(placeholder="Комментарий к заявке" rows="1").input.textarea
+          textarea(placeholder="Комментарий к заявке" name="comment" rows="1").input.textarea
         div.form__actions.contacts__action
-          button.button Отправить заявку
+          button(type="submit").button Отправить заявку

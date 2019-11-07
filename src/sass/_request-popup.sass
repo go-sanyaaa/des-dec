@@ -17,11 +17,11 @@
     overflow-y: auto
     background-color: rgba(0,0,0,.85)
     opacity: 1
-    transform: translateX(0)
-    transition: .5s all
+    transform: scale(1)
+    transition: .5s opacity
     &--hidden
       opacity: 0
-      transform: translateX(100%)
+      transform: scale(0)
   &__content
     display: flex
     justify-content: flex-end
@@ -33,6 +33,7 @@
       padding: 20px 0
       justify-content: center
   &__close-btn
+    cursor: pointer
     position: absolute
     width: 32px
     right: 34px
