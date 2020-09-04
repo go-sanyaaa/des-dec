@@ -31,7 +31,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.0",
